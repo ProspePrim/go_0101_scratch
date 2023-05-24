@@ -27,7 +27,7 @@ COPY --from=build /etc/group /etc/group
 COPY --from=build /go/bin/app.bin /go/bin/app.bin
 COPY --from=build --chown=${USER}:${USER} /go/src/app/upload uploads
 
-USER ${USER}:${USER}
+USER $USER:$USER
 
 EXPOSE 9999
 
